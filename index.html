@@ -225,25 +225,25 @@
 
     <script>
         // Load fonts using Web Font Loader
-        const loadFonts = async () => {
-            try {
-                const fontFace1 = new FontFace('BigShouldersText', 'url(fonts/BigShouldersText-Medium.ttf)');
-                const fontFace2 = new FontFace('RobotoCondensed', 'url(fonts/RobotoCondensed-Regular.ttf)');
-                const fontFace3 = new FontFace('Roboto', 'url(fonts/Roboto-Regular.ttf)');
-                const fontFace4 = new FontFace('RobotoMedium', 'url(fonts/Roboto-Medium.ttf)');
-                await Promise.all([
-                    fontFace1.load(),
-                    fontFace2.load(),
-                    fontFace3.load(),
-                    fontFace4.load()
-                ]).then(fonts => {
-                    fonts.forEach(font => document.fonts.add(font));
-                });
-            } catch (e) {
-                console.error('Lỗi tải font:', e);
-                alert('Không thể tải font. Vui lòng kiểm tra file font trong thư mục assets.');
-            }
-        };
+       @font-face {
+      font-family: 'BigShouldersText';
+      src: url('fonts/BigShouldersText-Medium.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'RobotoCondensed';
+      src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'RobotoMedium';
+      src: url('fonts/Roboto-Medium.ttf') format('truetype');
+    }
 
         // Initialize PWA
         window.onload = async () => {
@@ -733,6 +733,7 @@
 </body>
 
 </html>
+
 
 
 
