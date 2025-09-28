@@ -227,10 +227,10 @@
         // Load fonts using Web Font Loader
         const loadFonts = async () => {
             try {
-                const fontFace1 = new FontFace('BigShouldersText', 'url(zed/fonts/BigShouldersText-Medium.ttf)');
-                const fontFace2 = new FontFace('RobotoCondensed', 'url(zed/fonts/RobotoCondensed-Regular.ttf)');
-                const fontFace3 = new FontFace('Roboto', 'url(zed/fonts/Roboto-Regular.ttf)');
-                const fontFace4 = new FontFace('RobotoMedium', 'url(zed/fonts/Roboto-Medium.ttf)');
+                const fontFace1 = new FontFace('BigShouldersText', 'url(fonts/BigShouldersText-Medium.ttf)');
+                const fontFace2 = new FontFace('RobotoCondensed', 'url(fonts/RobotoCondensed-Regular.ttf)');
+                const fontFace3 = new FontFace('Roboto', 'url(fonts/Roboto-Regular.ttf)');
+                const fontFace4 = new FontFace('RobotoMedium', 'url(fonts/Roboto-Medium.ttf)');
                 await Promise.all([
                     fontFace1.load(),
                     fontFace2.load(),
@@ -733,6 +733,7 @@
 </body>
 
 </html>
+
 
 
 
